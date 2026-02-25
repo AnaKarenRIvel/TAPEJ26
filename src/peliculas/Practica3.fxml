@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="peliculas.Practica3Controller">
+   <children>
+      <Label layoutX="35.0" layoutY="35.0" text="Escribe el título de una película" />
+      <Label layoutX="250.0" layoutY="35.0" text="Películas" />
+      
+      <TextField fx:id="tfPelicula" layoutX="35.0" layoutY="60.0" prefWidth="180.0" />
+      <ComboBox fx:id="cbPeliculas" layoutX="250.0" layoutY="60.0" prefWidth="120.0" />
+      
+      <Button layoutX="76.0" layoutY="100.0" onAction="#btnAgregarActionPerformed" text="Agregar" />
+   </children>
+
+</AnchorPane>
