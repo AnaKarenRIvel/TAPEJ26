@@ -1,6 +1,5 @@
 package NumerosAleartorios;
 
-
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -10,18 +9,20 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 
-
 public class NumerosAleatoriosController implements Initializable {
+    
     @FXML
-    private Spinner<Integer>SpinnerMin;
+    private Spinner<Integer> SpinnerMin;
     @FXML
-    private Spinner<Integer>SpinnerMax;
+    private Spinner<Integer> SpinnerMax;
     @FXML
     private TextField txtResultado;
+    
     private final Random random = new Random();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // Configuramos el rango de los spinners (Min, Max, ValorInicial)
         SpinnerMin.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 1)
         );
@@ -30,17 +31,20 @@ public class NumerosAleatoriosController implements Initializable {
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 10)
         );
     }    
+
     @FXML
-    private void generarNumero(){
-        int min= SpinnerMin.getValue();
-        int max= SpinnerMax.getValue();
+    private void generarNumero() {
+        int min = SpinnerMin.getValue();
+        int max = SpinnerMax.getValue();
         
-        if(min>max){
-            txtResultado.setText("Error");
+        // Validación simple por si el usuario pone el min más alto que el max
+        if (min >= max) {
+            txtResultado.setText("Error: Min >= Max");
             return;
         }
-        int numero=random.nextInt((max-min)+1)+min;
+        
+        // Fórmula para número aleatorio entre min y max (incluyendo ambos)
+        int numero = random.nextInt((max - min) + 1) + min;
         txtResultado.setText(String.valueOf(numero));
     }
 }
-// cambio
