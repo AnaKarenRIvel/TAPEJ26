@@ -1,18 +1,19 @@
-package peliculas;
+package Practica6;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
 
-public class Practica3App extends Application {
+public class main extends Application {
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Practica3.fxml"));
-        
+        Parent root = FXMLLoader.load(getClass().getResource("Practica6.fxml"));
+
         Scene scene = new Scene(root);
-        stage.setTitle("Cine - Práctica 3");
+        stage.setTitle("Práctica 6 - Encuesta");
         stage.setScene(scene);
         stage.show();
     }

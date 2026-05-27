@@ -1,4 +1,4 @@
-package practica7;
+package biblioteca;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,12 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class practica7app extends Application {
+public class bibliotecaapp extends Application {
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/practica7/practica7.fxml"));
-        
-        stage.setTitle("Práctica 7 - Administrador de Respuestas");
+        Parent root = FXMLLoader.load(getClass().getResource("biblioteca.fxml"));
+        stage.setTitle("Sistema de Gestión de Biblioteca - Proyecto Final");
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.show();

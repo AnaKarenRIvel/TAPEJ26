@@ -8,11 +8,11 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practica7.practica7controller">
-   <children>
-      <Button fx:id="jButton1" layoutX="14.0" layoutY="17.0" text="+" />
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="practica7.Practica7Controller">
+    <children>
+      <Button fx:id="jButton2" layoutX="14.0" layoutY="17.0" onAction="#jButton2ActionPerformed" text="+" />
       <Button fx:id="jButton3" layoutX="45.0" layoutY="17.0" onAction="#jButton3ActionPerformed" text="-" />
-      <Button fx:id="jButton2" layoutX="75.0" layoutY="17.0" text="Guardar" />
+      <Button fx:id="jButton1" layoutX="75.0" layoutY="17.0" onAction="#jButton1ActionPerformed" text="Guardar" />
       <Button fx:id="btnActualizar" layoutX="415.0" layoutY="17.0" onAction="#btnActualizarActionPerformed" text="Actualizar" />
       
       <ComboBox fx:id="jComboBox1" layoutX="14.0" layoutY="50.0" prefWidth="81.0" />
@@ -25,10 +25,10 @@
         <columns>
           <TableColumn fx:id="colId" prefWidth="50.0" text="id" />
           <TableColumn fx:id="colSisOper" prefWidth="100.0" text="Sist. Op." />
-            <TableColumn fx:id="colProgra" prefWidth="75.0" text="Progra." />
-            <TableColumn fx:id="colDiseno" prefWidth="75.0" text="Diseño" />
-            <TableColumn fx:id="colAdmon" prefWidth="80.0" text="Admon." />
-            <TableColumn fx:id="colHoras" prefWidth="85.0" text="Horas" />
+          <TableColumn fx:id="colProgra" prefWidth="75.0" text="Progra." />
+          <TableColumn fx:id="colDiseno" prefWidth="75.0" text="Diseño" />
+          <TableColumn fx:id="colAdmon" prefWidth="80.0" text="Admon." />
+          <TableColumn fx:id="colHoras" prefWidth="85.0" text="Horas" />
         </columns>
       </TableView>
    </children>
