@@ -1,1 +1,2 @@
 Windows,S,S,N,8
+Windows,N,S,N,8
